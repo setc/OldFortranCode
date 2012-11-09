@@ -1,0 +1,131 @@
+%% This document created by Scientific Notebook (R) Version 3.0
+
+
+\documentclass[12pt,thmsa]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{sw20jart}
+
+%TCIDATA{TCIstyle=article/art4.lat,jart,sw20jart}
+
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Created=Mon Aug 19 14:52:24 1996}
+%TCIDATA{LastRevised=Fri Jun 03 00:13:01 2005}
+%TCIDATA{CSTFile=Lab Report.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\input{tcilatex}
+\begin{document}
+
+
+\subsubsection{\protect\vspace{1pt}Sebasti\'{a}n Torrente Carrillo}
+
+\subsubsection{8-6-stc}
+
+\subsubsection{\protect\vspace{1pt}En el documento CO2HAWAI tenemos las
+concentraciones de CO2 en la atm\'{o}sfera medida mes a mes, desde 1959 a
+2002. Representar graficamente los datos. Aplicar la transformada de Fourier
+para buscar una periodicidad a los datos. Aplicar la transformada de Fourier
+a los datos sin la componente lineal.}
+
+Para representar gr\'{a}ficamente primero tenemos que disponer los datos en
+dos columnas de datos, meses para el eje x y la concentraci\'{o}n de CO2
+para la y. Para ello se puede hacer o a mano (algo muy poco recomendable
+debido a la cantidad de datos) o mediante un programa que lea y reordene.
+
+Una vez reordenados los datos podemos representarlos con facilidad, para la
+gr\'{a}fica he suprimido los datos correspondientes a los valores -99, ya
+que no son significativos y hace que la gr\'{a}fica se vea a un tama\~{n}o
+muy reducido si los representamos.
+
+La gr\'{a}fica que obtenemos es la siguiente:
+
+\FRAME{dtbpF}{476.3125pt}{320.1875pt}{0pt}{}{}{Figure }{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 476.3125pt;height 320.1875pt;depth
+0pt;original-width 572.125pt;original-height 383.9375pt;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'IHH6KQ03.wmf';tempfile-properties "XPR";}}
+
+Podemos observar que se compone de dos comportamientos, uno oscilatorio y el
+otro lineal. Por lo que si quisiesemos realizar la transformada solo al
+comportamiento oscilatorio tendriamos que eliminar el lineal. Para ello
+podemos realizar un ajuste lineal y restarle la pendiente a todos los
+puntos. Para la realizaci\'{o}n del ajuste he decidido emplear el programa
+Microcal ORIGIN, por varios motivos, los principales son que maneja muy bien
+los ajustes lineales y que me permite realizar operaciones sobre todos los
+elementos de una columna.
+
+\vspace{1pt}
+
+Represento a continuaci\'{o}n la recta ajustada sobre los datos:
+
+\vspace{1pt}\FRAME{dtbpF}{417.625pt}{280.75pt}{0pt}{}{}{Figure }{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 417.625pt;height 280.75pt;depth
+0pt;original-width 572.125pt;original-height 383.9375pt;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'IHH6KQ05.wmf';tempfile-properties "XPR";}}
+
+Los datos que he obtenido para la recta son: $y=a\cdot x+b$ ; $a=0.11276$ ; $%
+b=311.265$
+
+\vspace{1pt}
+
+Ahora aplicamos la transformada de Fourier para encontrar la periodicidad en
+estos datos, tras aplicarla a los datos ''en bruto'' (esto es, sin quitar la
+componente lineal) tenemos la siguiente gr\'{a}fica:
+
+\FRAME{dtbpF}{420.625pt}{282.75pt}{0pt}{}{}{Figure }{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 420.625pt;height 282.75pt;depth
+0pt;original-width 572.125pt;original-height 383.9375pt;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'IHH6KQ04.wmf';tempfile-properties "XPR";}}
+
+Vemos que tenemos un pico muy alto en cerca del origen y otro en el punto
+0.082, lo que dar\'{i}a una periodicidad de 12,2 meses.
+
+\vspace{1pt}
+
+Si aplicamos la transformada de Fourier a los datos ''refinados''
+(quitandoles la componente lineal), tenemos:
+
+\FRAME{dtbpF}{465.8125pt}{313.125pt}{0pt}{}{}{Figure }{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 465.8125pt;height 313.125pt;depth
+0pt;original-width 572.125pt;original-height 383.9375pt;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'IHH6KQ06.wmf';tempfile-properties "XPR";}}
+
+Vemos que tenemos un pico principal y dos picos secundarios. La posici\'{o}n
+del pico principal es 0.0839844, lo que nos da una frecuencia de 11.9 meses
+(cercana al a\~{n}o). Hay que destacar que la posici\'{o}n de este pico es
+similar a la posici\'{o}n del pico secundario que se obtiene en el caso
+anterior. Lo que me lleva a pensar que se trata del mismo pico, y que la
+dependencia lineal restaba precisi\'{o}n a la transformada de Fourier. Si
+esto ultimo es cierto podemos achacar las diferencias entre los valores de
+las frecuencias al no poder ajustar la funci\'{o}n perfectamente a una linea
+recta.
+
+\vspace{1pt}
+
+Incluyo en esta versi\'{o}n la gr\'{a}fica de la concentraci\'{o}n de CO2
+sin la componente lineal:
+
+\FRAME{dtbpF}{389pt}{261.5625pt}{0pt}{}{}{Figure }{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 389pt;height 261.5625pt;depth
+0pt;original-width 572.125pt;original-height 383.9375pt;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'IHH9OA00.wmf';tempfile-properties "XPR";}}
+
+\vspace{1pt}
+
+Las dem\'{a}s anotaciones a este ejercicio son relativas al programa y son
+comentadas en este.
+
+\end{document}
