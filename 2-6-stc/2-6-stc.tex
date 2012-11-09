@@ -1,0 +1,130 @@
+%% This document created by Scientific Notebook (R) Version 3.0
+
+
+\documentclass[12pt,thmsa]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{sw20jart}
+
+%TCIDATA{TCIstyle=article/art4.lat,jart,sw20jart}
+
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Created=Mon Aug 19 14:52:24 1996}
+%TCIDATA{LastRevised=Mon Apr 04 00:13:38 2005}
+%TCIDATA{CSTFile=Lab Report.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\input{tcilatex}
+\begin{document}
+
+
+\subsection{2--6-stc}
+
+\subsection{Sebasti\'{a}n Torrente Carrillo:}
+
+\vspace{1pt}\textbf{Calcular la resistencia equivalente en un sistema de
+redes dado:}
+
+El sistema que se nos propone en el enunciado es el siguiente:
+
+\FRAME{dtbpF}{185.9375pt}{181.4375pt}{0pt}{}{}{Figure }{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 185.9375pt;height 181.4375pt;depth
+0pt;original-width 182.9375pt;original-height 178.4375pt;cropleft
+"0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'IEE5QQ01.wmf';tempfile-properties "XPR";}}
+
+Y se nos pide calcular la resistencia equivalente entre los puntos a y b. Se
+nos da como dato que la resistencia por unidad de longitud es de 5 ohmnios
+por centimetro y d=10cm.
+
+Para calcular la resistencia equivalente primero tendremos que calcular
+cuanto vale la resistencia en cada tramo. Se puede ver con facilidad que
+existen tres tipos de tramos distintos. Los tramos de longitud d/2 que se
+conectan con los puntos a \'{o} b. Los tramos de longitud d que se
+encuentran entre 1-4 y 2-3. Y los tramos correspondientes con los lados del
+cuadrado inscrito.
+
+Calculamos los valores de la resistencia para cada tipo de tramo, al
+tratarse de calculos muy simples (multiplicar la longitud del tramo por la
+resistencia por centimetro) los obviamos y damos directamente los resultados:
+
+Resistencia tipo 1 (res1 en el c\'{o}digo fuente): 50 ohmnios
+
+Resistencia tipo 2 (res2 en el c\'{o}digo fuente): 100 ohmnios
+
+Resistencia tipo 3 (res3 en el c\'{o}digo fuente): 70,71068
+
+\vspace{1pt}
+
+Para calcular la resistencia tenemos que tener en cuenta que la diferencia
+de voltaje entre dos puntos con una resistencia entre estos viene dada por: $%
+V=I\cdot R$
+
+En nuestro caso queremos calcular la resistencia, seg\'{u}n el enunciado
+tiene un valor constante, por lo que para un valor dado de $V$, y conociendo
+cuando vale cada tramo de la resistencia podemos calcular $I$ y con los dos
+valores podemos calcular de forma muy simple el valor de la resistencia
+equivalente. Para todo este proceso necesitaremos un valor arbitrario de V,
+una vez elegido planteamos un sistema de ecuaciones lineales para calcular
+el vector con los valores de las intensidades. Una vez resuelto tendremos
+por un lado el valor de V y por otro el de I, por lo que ya podremos obtener
+R.
+
+\vspace{1pt}
+
+El resto de anotaciones ya corresponden al programa en s\'{i}, por lo que se
+encuentran en el c\'{o}digo fuente de este como comentarios.
+
+\vspace{1pt}
+
+A continuaci\'{o}n expongo la matriz correspondiente al problema:
+
+$\left( 
+\begin{array}{lllllllllll}
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & -1 \\ 
+-1 & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ 
+0 & -1 & 0 & -1 & -1 & 0 & -1 & 0 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & 0 & -1 & 0 & 1 & -1 & 0 & -1 & 0 \\ 
+0 & 0 & -1 & 0 & 0 & -1 & 0 & 1 & 1 & 0 & 0 \\ 
+R_{1} & -R_{2} & 0 & R_{4} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+0 & 0 & R_{3} & 0 & 0 & -R_{6} & 0 & 0 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & -R_{4} & 0 & R_{6} & R_{7} & R_{8} & 0 & 0 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 0 & 0 & R_{8} & R_{9} & R_{10} & 0 \\ 
+0 & R_{2} & 0 & 0 & R_{5} & 0 & 0 & 0 & 0 & R_{10} & 0 \\ 
+0 & 0 & 0 & 0 & R_{5} & 0 & R_{7} & 0 & 0 & 0 & 0
+\end{array}
+\right) \cdot \left( 
+\begin{array}{l}
+I_{1} \\ 
+I_{2} \\ 
+I_{3} \\ 
+I_{4} \\ 
+I_{5} \\ 
+I_{6} \\ 
+I_{7} \\ 
+I_{8} \\ 
+I_{9} \\ 
+I_{10} \\ 
+I_{11}
+\end{array}
+\right) =\left( 
+\begin{array}{l}
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+V
+\end{array}
+\right) $
+
+\end{document}

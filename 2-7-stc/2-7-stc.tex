@@ -1,0 +1,123 @@
+%% This document created by Scientific Notebook (R) Version 3.0
+
+
+\documentclass[12pt,thmsa]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{sw20jart}
+
+%TCIDATA{TCIstyle=article/art4.lat,jart,sw20jart}
+
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Created=Mon Aug 19 14:52:24 1996}
+%TCIDATA{LastRevised=Mon Apr 04 00:13:12 2005}
+%TCIDATA{CSTFile=Lab Report.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\input{tcilatex}
+\begin{document}
+
+
+\subsection{2--7-stc}
+
+\subsection{Sebasti\'{a}n Torrente Carrillo:}
+
+\vspace{1pt}\textbf{Calcular la resistencia equivalente en un sistema
+tridimensional de resistencias (con una de ellas variable):}
+
+Dado el el cubo de resistencias:
+
+\begin{center}
+\FRAME{dtbpF}{216.25pt}{191.9375pt}{0pt}{}{}{Figure }{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 216.25pt;height 191.9375pt;depth
+0pt;original-width 213.0625pt;original-height 188.9375pt;cropleft
+"0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'IEE5Q000.wmf';tempfile-properties "XPR";}}
+\end{center}
+
+Se nos pide calcular la resistencia equivalente y los valores para dicha
+resistencia, en el caso en el que todas las resistencias tengan un mismo
+valor (1 ohm) salvo, la resistencia ubicada entre los puntos 1y 2 (que
+ser\'{a} variable).
+
+En el informe correspondiente a la pr\'{a}ctica 2-6-stc se detalla el metodo
+para obtener una resistencia equivalente mediante el uso de las Leyes de
+Kirchoff y de el c\'{a}lculo de ecuaciones lineales. Por lo que no
+repetiremos lo dicho all\'{i}.
+
+Sin embargo este caso tiene importantes diferencias con respecto al
+anterior. La m\'{a}s obvia es la disposici\'{o}n tridimensional de la red,
+la otra diferencia es la resistencia variable que tenemos en el conjunto.
+
+(Recordemos que tenemos como dato el que el valor de la resistencia
+equivalente en el caso de que todas tengan un mismo valor R es de $\frac{5R}{%
+6}$ que en nuestro caso ser\'{i}a simplemente $\frac{5}{6}$)
+
+Esto nos da una de idea de como abordar el problema. Resolveremos este
+problema igual que el anterior, solo que ahora una de las resistencias del
+sistema ir\'{a} tomando distintos valores dentro de un intervalo.
+Obtendremos una sucesi\'{o}n de valores de R que podremos representar
+graficamente.
+
+\vspace{1pt}
+
+El sistema de matrices correspondiente al problema es el siguiente:
+
+$\left( 
+\begin{array}{lllllllllllll}
+1 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & -1 \\ 
+1 & -1 & 0 & 0 & 0 & 0 & 0 & -1 & 0 & 0 & 0 & 0 & 0 \\ 
+0 & 0 & -1 & 1 & 0 & 0 & 0 & -1 & 0 & 0 & 0 & 0 & 0 \\ 
+0 & 1 & 1 & 0 & 0 & -1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 0 & -1 & 0 & -1 & 1 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & 0 & -1 & 0 & 0 & 0 & 0 & -1 & 1 & 0 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 0 & 0 & -1 & 1 & 0 & 0 & 1 & 0 \\ 
+R_{1} & R_{2} & -R_{3} & -R_{4} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & -R_{4} & 0 & 0 & R_{7} & -R_{8} & -R_{9} & 0 & 0 & 0 & 0 \\ 
+R_{1} & 0 & 0 & 0 & R_{5} & 0 & R_{7} & 0 & 0 & -R_{10} & 0 & 0 & 0 \\ 
+0 & -R_{2} & 0 & 0 & R_{5} & -R_{6} & 0 & 0 & 0 & 0 & R_{11} & 0 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & R_{9} & R_{10} & R_{11} & -R_{12} & 0 \\ 
+R_{1} & 0 & 0 & 0 & R_{5} & 0 & 0 & 0 & 0 & 0 & R_{11} & 0 & 0
+\end{array}
+\right) \cdot \left( 
+\begin{array}{l}
+I_{1} \\ 
+I_{2} \\ 
+I_{3} \\ 
+I_{4} \\ 
+I_{5} \\ 
+I_{6} \\ 
+I_{7} \\ 
+I_{8} \\ 
+I_{9} \\ 
+I_{10} \\ 
+I_{11} \\ 
+I_{12} \\ 
+I_{13}
+\end{array}
+\right) =\left( 
+\begin{array}{l}
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+0 \\ 
+V
+\end{array}
+\right) $
+
+Donde todas las resitencias tienen un valor de 1 ohm, excepto R1, que tiene
+valor variable.
+
+\end{document}

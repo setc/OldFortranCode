@@ -1,0 +1,81 @@
+%% This document created by Scientific Notebook (R) Version 3.0
+
+
+\documentclass[12pt,thmsa]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{sw20jart}
+
+%TCIDATA{TCIstyle=article/art4.lat,jart,sw20jart}
+
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Created=Mon Aug 19 14:52:24 1996}
+%TCIDATA{LastRevised=Mon Apr 18 00:38:19 2005}
+%TCIDATA{CSTFile=Lab Report.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\input{tcilatex}
+\begin{document}
+
+
+\subsection{\protect\vspace{1pt}Sebasti\'{a}n Torrente Carrillo}
+
+\section{\textbf{Ejercicio 3-9:}}
+
+\textbf{LA distribuci\'{o}n de velocidades moleculares en un gas idea en
+equilibrio t\'{e}rmico a la temperatura T viene dad por la funci\'{o}n de
+distribuci\'{o}n de Maxwell-Boltzmann f(v)}
+
+$\mathbf{f(v)=4\pi (}\frac{m}{2\pi kT}\mathbf{)}^{\frac{3}{2}}\mathbf{v}%
+^{2}\exp \mathbf{(-}\frac{m\frac{v^{2}}{2}}{kT}\mathbf{)}$
+
+\textbf{con k cte de Boltzman, y m la masa de las molecula del gas.}
+
+\textbf{Representa gr\'{a}ficamente esta funci\'{o}n para el gas arg\'{o}n y
+las siguientes temperaturas:}
+
+$\mathbf{T1=100K}$
+
+$\mathbf{T2=200K}$
+
+$\mathbf{T3=300K}$
+
+\textbf{Y calcula la velocidad cuadr\'{a}tica media}
+
+\textbf{\vspace{1pt}}
+
+La representaci\'{o}n gr\'{a}fica no plantea muchos problemas, simplemente
+planteamos la funci\'{o}n y mediante un bucle vamos obteniendo puntos que
+luego graficaremos mediante el GNUplot. Las gr\'{a}ficas se incluyen en los
+documentos de imagen de nombre ''3-9a-stc.gif'', ''3-9b-stc.gif'' y
+''3-9-stc.gif'' para temperaturas T1, T2 y T3 respectivamente.
+
+\vspace{1pt}
+
+El apartado de inter\'{e}s de este ejercicio es el segundo. Sabemos, que
+dada una distribuci\'{o}n continua de probabilidades f(x), la media de una
+magnitud g(x) $<g(x)>$ se calcula mediante la expresi\'{o}n $%
+<g(x)>=\int\limits_{-\infty }^{+\infty }g(x)\cdot f(x)^{2}dx$
+
+En nuestro caso tenemos que obtener la velocidad cuadr\'{a}tica media, esto
+es $<v^{2}>=\int\limits_{-\infty }^{+\infty }v^{2}\cdot f(v)^{2}dv$
+
+Tenemos un problema, y es que los intervalos de esta integral son infinitos,
+pero sabemos que la funci\'{o}n f(v) es convergente, luego su cuadrado
+tambi\'{e}n lo \'{e}s. Solo quedar\'{i}a comprobar que $v^{2}\cdot f(v)^{2}$
+converge. Si es as\'{i} para poder integrar la funci\'{o}n por m\'{e}todos
+numericos cogeremos un intervalo de integraci\'{o}n lo suficientemente
+grande de tal modo que aumentarlo variar\'{i}a el resultado en una cantidad
+despreciable. En este caso concreto tenemos que la funci\'{o}n si es
+convergente, por lo que la integral tiene sentido. Como se puede ver en la
+gr\'{a}fica, esta consta de dos picos y luego decae al cero de modo brusco.
+
+\vspace{1pt}
+
+Todas las dem\'{a}s aclaraciones se encuentran en el c\'{o}digo fuente del
+programa.
+
+\end{document}

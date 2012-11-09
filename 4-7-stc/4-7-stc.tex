@@ -1,0 +1,162 @@
+%% This document created by Scientific Notebook (R) Version 3.0
+
+
+\documentclass[12pt,thmsa]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{sw20jart}
+
+%TCIDATA{TCIstyle=article/art4.lat,jart,sw20jart}
+
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Created=Mon Aug 19 14:52:24 1996}
+%TCIDATA{LastRevised=Thu Apr 28 23:00:17 2005}
+%TCIDATA{CSTFile=Lab Report.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\input{tcilatex}
+\begin{document}
+
+
+\subsubsection{EJERCICIO 4.7}
+
+\subsubsection{El la aproximaci\'{o}n de peque\~{n}as oscilaciones y
+suponiendo una masa del resorte despreciable , la Lagrangiana para un
+p\'{e}ndulo de WilderForce es:}
+
+\subsubsection{$L=\frac{1}{2}m\left( \frac{dz}{dt}\right) ^{2}+\frac{1}{2}%
+I\left( \frac{d\theta }{dt}\right) ^{2}-\frac{1}{2}kz^{2}-\frac{1}{2}\delta
+\theta -\frac{1}{2}\epsilon z\theta $}
+
+\subsubsection{Con m la masa que cuelga del pendulo, k y $\delta $ las
+constantes el\'{a}sticas longitudinal y torsional, $\epsilon $ una constante
+que describe el acoplamiento entre ambas oscilaciones .}
+
+\subsubsection{\protect\vspace{1pt}}
+
+a) Escribe las ecuaciones del movimiento de este sistema, resuelvelas y
+representa z(t) y $\theta (t)$
+
+\vspace{1pt}Para calcular las ecuaciones de movimiento usaremos el
+formalismo de Lagrange. Las ecuaciones de movimiento se obtienen a partir de
+las ecuaci\'{o}nes de lagrange, que en nuestro caso son dos:
+
+$\frac{d}{dt}(\frac{\partial L}{\partial z^{\prime }})-\frac{\partial L}{%
+\partial z}=0$
+
+$\frac{d}{dt}(\frac{\partial L}{\partial \theta ^{\prime }})-\frac{\partial L%
+}{\partial \theta }=0$
+
+Con L la lagrangiana del sistema. Realizamos las derivadas de la Lagrangiana
+necesarias.
+
+$\frac{\partial L}{\partial z^{\prime }}=mz^{\prime }$ ; $\frac{\partial L}{%
+\partial \theta ^{\prime }}=I\theta ^{\prime }$
+
+$\frac{d}{dt}(\frac{\partial L}{\partial z^{\prime }})=mz^{\prime \prime }$
+; $\frac{d}{dt}(\frac{\partial L}{\partial \theta ^{\prime }})=m\theta
+^{\prime \prime }$
+
+$\frac{\partial L}{\partial z}=-kz-\frac{1}{2}\epsilon \theta =-\frac{1}{2}%
+(k+\epsilon \theta )$ ; $\frac{\partial L}{\partial \theta }=\delta \theta -%
+\frac{1}{2}\epsilon z$
+
+Obtenemos las ecuaciones:
+
+$mz^{\prime \prime }+\frac{1}{2}(2k+\epsilon \theta )=0$ ; $z^{\prime \prime
+}=-\frac{1}{2m}(2kz+\epsilon \theta )$
+
+$I\theta ^{\prime \prime }+\delta \theta -\frac{1}{2}\epsilon z=0$ ; $\theta
+^{\prime \prime }=-\frac{1}{2I}(2\delta z+\epsilon \theta )$
+
+En el enunciado se nos dan las condiciones iniciales: $z(0)=0.01m$ y $\theta
+(0)=0$ . Tenemos dos ecuaciones de segundo orden, por lo que necesitaremos
+reducir el orden de las dos convirtiendolas en un sistema de ecuaciones
+lineales.
+
+$z^{\prime }(t)=u(t)$
+
+$\theta ^{\prime }(t)=v(t)$
+
+$u^{\prime }(t)=-\frac{1}{2m}(k+\epsilon \theta )$
+
+$v^{\prime }(t)=\frac{1}{I}(\delta \theta -\frac{\epsilon z}{2})$
+
+Que si podemos resolver numericamente, para ello emplearemos el m\'{e}todo
+de Runge-Kutta, las funciones que resultan se muestran en las siguientes
+imagenes:
+
+\vspace{1pt}
+
+z(t):
+
+\FRAME{dtbpF}{631.75pt}{309.25pt}{0pt}{}{}{Figure }{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 631.75pt;height 309.25pt;depth
+0pt;original-width 626.3125pt;original-height 305.625pt;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'IFOBBN00.wmf';tempfile-properties "XPR";}}
+
+$\theta (t):$
+
+\FRAME{dtbpF}{631.75pt}{309.25pt}{0pt}{}{}{Figure }{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 631.75pt;height 309.25pt;depth
+0pt;original-width 626.3125pt;original-height 305.625pt;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'IFOBCJ01.wmf';tempfile-properties "XPR";}}
+
+Representamos las dos funciones a la vez para comprobar que se alternan los
+dos tipos de oscilaciones:
+
+\FRAME{dtbpF}{631.75pt}{309.25pt}{0pt}{}{}{Figure }{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 631.75pt;height 309.25pt;depth
+0pt;original-width 626.3125pt;original-height 305.625pt;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'IFOBDS02.wmf';tempfile-properties "XPR";}}
+
+\vspace{1pt}
+
+A partir de las ecuaciones de movimiento se puede comprobar el valor de las
+frecuencias (se puede sacar ya que siguen la ecuaci\'{o}n de ondas), y se
+puede comprobar como este coincide con el valor previsto por la teor\'{i}a.
+
+\vspace{1pt}
+
+Solo nos queda dar otros valores a las constantes $m,I,k,\delta $ y ver que
+forma toman las curvas:
+
+Las constantes elegidas son:
+
+$m=1.5kg$ ; $I=4\cdot 10^{-4}$ ; $k=3.0$ ; $\delta =0.01$
+
+Las gr\'{a}ficas que obtenemos una vez calculado por el programa son:
+
+\FRAME{dtbpF}{631.75pt}{309.25pt}{0pt}{}{}{Figure }{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 631.75pt;height 309.25pt;depth
+0pt;original-width 626.3125pt;original-height 305.625pt;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'IFOCV905.wmf';tempfile-properties "XPR";}}
+
+Lor primero que podemos apreciar es que la oscilaci\'{o}n longitudinal se
+mantiene constante para toda la oscilaci\'{o}n. En el caso de la oscilaci%
+\'{o}n c\'{i}clica vemos que si bien no tiene un esquema sinuidal puro como
+el de la oscilaci\'{o}n longitudinal si que se mantiene constante. Lo m\'{a}%
+s importante es ver que en este caso las dos oscilaciones no se alternan
+como en el caso anterior, manteniendo una cierta ''independencia'' entre
+ellas.
+
+\vspace{1pt}
+
+Las dem\'{a}s consideraciones sobre este problema son referentes a la
+programaci\'{o}n de este, por lo que se pueden encontrar en el codigo fuente
+del ejercicio.
+
+\vspace{1pt}
+
+\end{document}
